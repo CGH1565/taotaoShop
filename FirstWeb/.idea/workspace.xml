@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4ea4f45-e17a-42bb-8658-cc7db84f6214" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/artifacts/WelcomeDay_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/FirstWeb.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/WelcomeDay/WelcomeDay.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/WelcomeDay/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FirstWeb/WelcomeDay/web/index.jsp" />
+    <list default="true" id="a4ea4f45-e17a-42bb-8658-cc7db84f6214" name="Default" comment="1">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FirstWeb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FirstWeb/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../FirstWeb/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -551,12 +543,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510709734538</updated>
-      <workItem from="1510709738110" duration="1810000" />
+      <workItem from="1510709738110" duration="2134000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1510712604787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1510712604787</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1810000" />
+    <option name="totallyTimeSpent" value="2134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="0" />
@@ -598,6 +598,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
