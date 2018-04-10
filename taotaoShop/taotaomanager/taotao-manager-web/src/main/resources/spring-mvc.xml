@@ -19,7 +19,7 @@
                      http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
     <!--指明 controller 所在包，并扫描其中的注解-->
-    <context:component-scan base-package="controller"/>
+    <context:component-scan base-package="ssm.controller"/>
 
     <!-- 静态资源(js、image等)的访问 -->
     <mvc:default-servlet-handler/>
@@ -46,47 +46,18 @@
     <!--用于支持Servlet、JSP视图解析-->
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/views/"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
     <!--资源映射-->
-    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
-    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+    <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+    <mvc:resources location="/WEB-INF/js/"  mapping="/js/**"/>
 
     <!--文件上传解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="10240000"></property>
     </bean>
 
-    <!-- 配置多视图解析 -->
-    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-        <property name="contentNegotiationManager">
-            <bean class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
-                <property name="mediaTypes">
-                    <map>
-                        <entry key="json" value="application/json"></entry>
-                        <entry key="xml" value="application/xml"></entry>
-                    </map>
-                </property>
-            </bean>
-        </property>
-        <property name="defaultViews">
-            <list>
-                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>
-                <bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-                    <constructor-arg>
-                        <bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
-                            <property name="classesToBeBound">
-                                <list>
-                                    <value>priv.xiaohan.ssm.model.Administrators</value>
-                                </list>
-                            </property>
-                        </bean>
-                    </constructor-arg>
-                </bean>
-            </list>
-        </property>
-    </bean>
 
 </beans>

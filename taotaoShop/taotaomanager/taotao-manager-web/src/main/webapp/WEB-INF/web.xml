@@ -28,7 +28,7 @@
     <!-- Spring和mybatis的配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:mybatis-config.xml</param-value>
+        <param-value>classpath:mybatis-spring.xml</param-value>
     </context-param>
 
     <!-- 防止Spring内存溢出监听器 -->
@@ -36,13 +36,6 @@
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
     </listener>
 
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.js</url-pattern>
-        <url-pattern>*.css</url-pattern>
-        <url-pattern>/assets/*"</url-pattern>
-        <url-pattern>/images/*</url-pattern>
-    </servlet-mapping>
     <!-- Spring MVC servlet -->
     <servlet>
         <servlet-name>SpringMVC</servlet-name>
