@@ -1,12 +1,13 @@
 package ssm.controller;
-
-import ssm.model.TbItem;
+//
+import org.springframework.web.bind.annotation.RequestMethod;
+import ssm.pojo.EUDataGridResult;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import ssm.pojo.TaotaoResult;
+import ssm.pojo.TbItem;
 import ssm.service.ItemService;
-
 import javax.annotation.Resource;
 
 /**
@@ -17,11 +18,22 @@ public class ItemController {
     @Resource
     public ItemService itemService;
 
-    @RequestMapping("/item/{itemId}")
+    @RequestMapping("/item/list")
     @ResponseBody
-    public TbItem getItemById(@PathVariable Long itemId){
-        TbItem itemById = itemService.getItemById(itemId);
-        return itemById;
+    public EUDataGridResult getItemList(Integer page,Integer rows){
+        EUDataGridResult itemList = itemService.getItemList(page, rows);
+        return itemList;
     }
 
+    @RequestMapping(value = "/item/save",method = RequestMethod.POST)
+    @ResponseBody
+    public TaotaoResult createItem(TbItem tbItem,String desc,String itemParams){
+        TaotaoResult item = null;
+        try {
+            item = itemService.createItem(tbItem,desc,itemParams);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return item;
+    }
 }
